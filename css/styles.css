@@ -1,0 +1,101 @@
+/* Paleta de colores */
+/* generak */
+main {
+  min-height: 90vh;
+  padding: 10px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #16324F;
+}
+.navbar a {
+  color: #FFFFFF;
+}
+.navbar a:hover {
+  color: #29A6FF;
+}
+
+.offcanvas {
+  background-color: #16324F !important;
+}
+
+/* Que es finti */
+.btn {
+  background-color: #16324F;
+}
+
+.btn:hover {
+  color: #2A628F;
+  background-color: #2A84C7;
+}
+
+.q-e-finti {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(1, 100vw);
+  grid-template-rows: 45vh 45vh;
+  grid-column-gap: 5px;
+}
+.q-e-finti img {
+  width: 80vw;
+}
+
+@media screen and (min-width: 768px) {
+  .q-e-finti {
+    grid-template-columns: repeat(2, 40vw);
+    grid-template-rows: 80vh;
+  }
+  .q-e-finti img {
+    max-width: 40vw;
+  }
+}
+/* Pasos */
+.pasos {
+  display: grid;
+  padding: 20px;
+  justify-content: center;
+  grid-template-columns: repeat(1, 90vw);
+  grid-template-rows: repeat(3, 500px);
+  grid-row-gap: 10px;
+}
+
+.paso {
+  background-color: #2A628F;
+  padding: 20px;
+  color: #FFFFFF;
+}
+.paso img {
+  max-height: 230px;
+}
+
+@media screen and (min-width: 768px) {
+  .pasos {
+    align-items: center;
+    grid-template-columns: repeat(3, 30vw);
+    grid-template-rows: repeat(1, 500px);
+    grid-column-gap: 10px;
+  }
+}
+/* cotiza */
+.formulario {
+  color: #FFFFFF;
+  width: 90vw;
+  background-color: #2A628F;
+}
+
+.evniar-form {
+  margin-top: 10px;
+}
+
+/* footer */
+.footer {
+  background-color: #16324F;
+  display: flex;
+  justify-content: center;
+}
+.footer i {
+  padding: 5px;
+}
+
+/*# sourceMappingURL=styles.css.map */
