@@ -8,7 +8,7 @@ $color5: #16324F;
 
 /* generak */
 
-main{
+main {
     min-height: 90vh;
     padding: 10px;
 }
@@ -20,10 +20,11 @@ main{
 
     a {
         color: $color1;
-    }
 
-    a:hover {
-        color: $color2;
+        &:hover {
+            color: $color2;
+            transform: translate(20px);
+        }
     }
 }
 
@@ -37,32 +38,41 @@ main{
 
 .btn {
     background-color: $color5 ;
+
+    &:hover {
+        color: $color4;
+        background-color: $color3;
+        transform: scale(1.01);
+    }
 }
 
-.btn:hover {
-    color:  $color4;
-    background-color: $color3 ;
-}
-.q-e-finti{
+.q-e-finti {
+    overflow: hidden;
     display: grid;
     align-items: center;
     grid-template-columns: repeat(1, 100vw);
-    grid-template-rows: 45vh 45vh; 
-    grid-column-gap: 5px;  
-        img{
-            width: 80vw;
-        }
+    grid-template-rows: 45vh 45vh;
+    grid-column-gap: 5px;
+
+    img {
+        width: 80vw;
+    }
 }
 
 @media screen and (min-width: 768px) {
-    .q-e-finti{
+    .q-e-finti {
         grid-template-columns: repeat(2, 40vw);
         grid-template-rows: 80vh;
+
         img {
             max-width: 40vw;
         }
     }
 
+}
+
+.soy-fint {
+    overflow: hidden;
 }
 
 /* Pasos */
@@ -75,43 +85,83 @@ main{
     grid-row-gap: 10px;
 }
 
-.paso{
+.paso {
     background-color: $color4;
     padding: 20px;
     color: $color1;
-    img{
+
+    img {
         max-height: 230px;
     }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    &:hover {
+        transform: scale(1.01);
+    }
+
 }
 
 @media screen and (min-width: 768px) {
-    .pasos{
+    .pasos {
         align-items: center;
         grid-template-columns: repeat(3, 30vw);
         grid-template-rows: repeat(1, 500px);
         grid-column-gap: 10px;
+
+    }
+
+    .paso {
+        height: 50vh;
+        overflow: scroll;
     }
 }
 
 /* cotiza */
 
-.formulario{
+.formulario {
     color: $color1;
-    width: 90vw;  
-    background-color: $color4;  
+    width: 90vw;
+    background-color: $color4;
 }
 
-.evniar-form{
+.evniar-form {
     margin-top: 10px;
 }
 
 /* footer */
 
-.footer{
+.footer {
     background-color: $color5;
     display: flex;
     justify-content: center;
-    i{
+
+    i {
         padding: 5px;
     }
+}
+
+/* scrollbar */
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: $color5 $color1;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: $color1;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: $color5;
+    border-radius: 10px;
+    border: 4px solid $color5;
 }
